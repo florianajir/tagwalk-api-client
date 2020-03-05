@@ -312,7 +312,7 @@ class ApiProvider
                 $apiToken = $user->getApiToken();
             } else {
                 $token = $this->apiTokenStorage->get();
-                if ($token) {
+                if ($token !== null) {
                     $apiToken = $token->getUserToken();
                 }
             }
